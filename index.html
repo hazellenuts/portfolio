@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Document</title>
-
-	<link rel="stylesheet" href="css/main.css">
-
+	<title>Gabrielle's Portfolio</title>
+	<link rel="stylesheet" href="./css/main.css">
 	<script src="libs/gsap/gsap.min.js" defer></script>
 	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-
 	<script src="js/app.js" defer></script>
-
 </head>
 <body>
+
+	<!-- Navbar -->
+	<nav id = "navbar" class="navbar">
+		<div id="hamburger" class="hamburger" onclick="toggleMenu()">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+		<ul id="nav-links" class="nav-links">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
 
 	<div class="wrapper">
 		<div class="content">
@@ -27,20 +37,18 @@
 					<div class="layer__header">
 						<div class="layers__title">Gabrielle Rosdiva</div>
 						<div class="layers__caption">portfolio</div>
-						
 					</div>
 					<div class="layer layers__base" style="background-image: url(img/layer_base.png);"></div>
 					<div class="layer layers__middle" style="background-image: url(img/layer_middle.png);"></div>
 					<div class="layer layers__front" style="background-image: url(img/layer_front.png);"></div>
 				</div>
 			</header>
-		
+
 			<article class="main-article" style="background-color: black;">
 				<div class="main-article__content">
 					<h2 class="main-article__header">To be continued</h2>
 					<p class="main-article__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis error provident dignissimos facere. Repellendus tempore autem qui! Quia magnam tempora esse id necessitatibus corrupti mollitia expedita sapiente cum rerum, ut dicta laboriosam!</p>
 				</div>
-				
 			</article>
 
 		</div>

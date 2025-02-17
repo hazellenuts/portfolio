@@ -126,3 +126,103 @@ body {
 	font-size: calc(var(--index) * .75);
 	letter-spacing: calc(var(--index) / 37.5);
 }
+
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(51, 51, 51, 0);
+	justify-content: center;
+	transition: backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}	
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100; /* Supaya di atas menu */
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3.5px 0;
+    transition: 0.3s;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+	
+}
+
+.navbar .nav-links li a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Sidebar Menu (Hidden by Default) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Mulai dari luar layar */
+        width: 250px;
+        height: 100vh;
+        background-color: #222;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: 0.5s ease-in-out;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0; /* Geser masuk */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Animasi hamburger menjadi "X" */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 4px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -4px);
+    }
+}
