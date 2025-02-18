@@ -351,7 +351,7 @@ button:hover {
 }
 
 .tool__text {
-    font-size: 16px;
+    font-size: calc(var(--index) * .8);
     font-weight: bold;
     color: white;
     position: absolute;
@@ -441,5 +441,20 @@ button:hover {
 		justify-content: center;
 	}
 
+	.tools__container{
+		min-width: 90%;
+	}
 	
+	.tool{
+		width: 85px;
+    	height: 85px;
+	}
+
+	.tool__img{
+		width: 40px;
+	}
+
+	.tool__text{
+		font-size: calc(var(--index) * .9);
+	}
 }
