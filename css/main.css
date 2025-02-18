@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,7 +20,7 @@
 	font-weight: 900;
 }
 body {
-	background-color: #010101;
+	background-color: #0e1008;
 	font-family: raleway_f, sans-serif;
 	line-height: 1.55;
 }
@@ -86,16 +88,19 @@ body {
 	margin-top: calc(var(--index) * -.75);
 }
 .main-article {
-	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -30), 0);
 	min-height: 100vh;
 	background-size: cover;
 	background-position: center;
 	color: var(--text);
 	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+	padding: 30px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	text-align: center;
+	text-align: start;
 	/* Update: */
 	top: -1px;
 	z-index: 10;
@@ -116,6 +121,12 @@ body {
 	transition: var(--transition);
 	will-change: transform;
 }
+
+.main-article__content {
+    flex: 2;
+    max-width: 600px;
+}
+
 .content {
 	will-change: transform;
 }
@@ -139,7 +150,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(51, 51, 51, 0);
+    background-color: rgba(14, 16, 8, 0);
 	justify-content: center;
 	transition: backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }	
@@ -176,6 +187,134 @@ body {
 	color: white;
 	text-decoration: none;
 }
+
+/* photo */
+.self-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+.self-photo img {
+    position: absolute;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.self-photo img:first-child {
+    transform: rotate(-10deg) translateY(10px);
+    z-index: 2;
+}
+
+.self-photo img:last-child {
+    transform: rotate(8deg) translateY(-10px) translateX(20px);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+
+/* buttons */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4CAF50; /* Warna hijau fresh */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: calc(var(--index) * .8);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button i{
+	font-size: 18px;
+}
+
+button:hover {
+    background-color: #388E3C; /* Warna lebih gelap pas hover */
+    transform: scale(1.05);
+}
+
+/* Warna unik untuk tiap button */
+.btn-cv {
+    background-color: #1e4a6e;
+}
+
+.btn-cv:hover {
+    background-color: #1976D2;
+}
+
+.btn-linkedin {
+    background-color: #142e3c;
+}
+
+.btn-linkedin:hover {
+    background-color: #005A8D;
+}
+
+.btn-github {
+    background-color: #333;
+}
+
+.btn-github:hover {
+    background-color: #4c4c4c;
+}
+
+.btn-gmail {
+    background-color: #551b1b;
+}
+
+.btn-gmail:hover {
+    background-color: #a21a1a;
+}
+
+
+/* tools */
+
+.tools{
+	min-height: 100vh;
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: start;
+	
+}
+
+.tools__header {
+	text-transform: uppercase;
+	font-size: calc(var(--index) * 1.6);
+	letter-spacing: calc(var(--index) / 7.5);
+	transform: var(--main-article-transform);
+	transition: var(--transition);
+	will-change: transform;
+	text-align: center;
+}
+
+.tools__paragraph {
+	max-width: calc(var(--index) * 45);
+	font-size: calc(var(--index) * .9);
+	margin-top: calc(var(--index) / 1.25);
+	transform: var(--main-article-transform);
+	transition: var(--transition);
+	will-change: transform;
+}
+
 
 /* Sidebar Menu (Hidden by Default) */
 @media (max-width: 768px) {
@@ -225,4 +364,29 @@ body {
     .hamburger.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(10px, -4px);
     }
+
+	.main-article {
+		padding-top: 150px;
+        flex-direction: column;
+        text-align: center;
+		gap: 160px;
+		justify-content: center;
+    }
+
+
+    .self-photo {
+        order: -1; /* Pindah ke atas */
+    }
+
+    .self-photo img {
+        max-width: 150px; /* Foto diperkecil di layar kecil */
+    }
+
+	.buttons-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	
 }

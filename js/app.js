@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		const isMobile = window.matchMedia("(max-width: 768px)").matches; // Cek jika layar kecil
 		if (window.scrollY > 50 && !isMobile) {
 			navbar.style.backdropFilter = "blur(10px)";
-			navbar.style.backgroundColor = "rgba(51, 51, 51, 0.3)";
+			navbar.style.backgroundColor = "rgba(14, 16, 8, 0.3)";
 		} else {
 			navbar.style.backdropFilter = "blur(0px)";
-			navbar.style.backgroundColor = "rgba(51, 51, 51, 0)";
+			navbar.style.backgroundColor = "rgba(14, 16, 8, 0)";
 		}
 	});
 	
