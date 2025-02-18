@@ -284,7 +284,7 @@ button:hover {
 /* tools */
 
 .tools{
-	min-height: 100vh;
+	min-height: 30vh;
 	color: var(--text);
 	display: flex;
 	flex-direction: column;
@@ -293,7 +293,7 @@ button:hover {
 	align-items: center;
 	position: relative;
 	text-align: start;
-	
+	gap: 40px;
 }
 
 .tools__header {
@@ -313,6 +313,59 @@ button:hover {
 	transform: var(--main-article-transform);
 	transition: var(--transition);
 	will-change: transform;
+}
+
+.tools {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.tools__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Biar logo di tengah */
+    align-items: center; /* Rata tengah secara vertikal */
+    gap: 20px;
+    max-width: 80%; /* Batas maksimal */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tool {
+    width: 100px;
+    height: 100px;
+    background: #2b2a13;
+    border-radius: 10px;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.tool__img {
+    width: 60px;
+    transition: opacity 0.3s ease;
+}
+
+.tool__text {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Efek hover */
+.tool:hover .tool__img {
+    opacity: 0;
+}
+
+.tool:hover .tool__text {
+    opacity: 1;
 }
 
 
