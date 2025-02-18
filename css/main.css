@@ -19,6 +19,10 @@
 	src: url(../fonts/raleway-black.woff2);
 	font-weight: 900;
 }
+html{
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #0e1008;
 	font-family: raleway_f, sans-serif;
@@ -284,7 +288,7 @@ button:hover {
 /* tools */
 
 .tools{
-	min-height: 30vh;
+	min-height: 10vh;
 	color: var(--text);
 	display: flex;
 	flex-direction: column;
