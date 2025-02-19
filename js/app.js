@@ -1,5 +1,5 @@
 window.addEventListener('scroll', e => {
-	document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
+	document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
 })
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 ScrollSmoother.create({
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Menghentikan scroll default browser
+        e.preventDefault(); 
 
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
@@ -55,7 +55,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
+function openProject(url) {
+    window.open(url, "_blank");
+}
 
 
 

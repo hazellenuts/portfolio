@@ -84,7 +84,7 @@ body {
 }
 .layers__title {
 	font-size: calc(var(--index) * 2.2);
-	letter-spacing: calc(var(--index) / 3.2);
+	letter-spacing: calc(var(--index) / 11);
 }
 .layers__caption {
 	font-size: calc(var(--index) / 1.175);
@@ -100,7 +100,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 5%;
-	padding: 30px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -134,13 +133,6 @@ body {
 .content {
 	will-change: transform;
 }
-.copy {
-	position: absolute;
-	bottom: calc(var(--index) * 2.5);
-	opacity: .45;
-	font-size: calc(var(--index) * .75);
-	letter-spacing: calc(var(--index) / 37.5);
-}
 
 
 /* Navbar Styles */
@@ -165,17 +157,17 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100; /* Supaya di atas menu */
+    z-index: 1100;
     position: absolute;
     left: 20px;
     top: 20px;
 }
 
 .hamburger .bar {
-    width: 25px;
-    height: 3px;
+    width: 23px;
+    height: 2.2px;
     background-color: white;
-    margin: 3.5px 0;
+    margin: 3.2px 0;
     transition: 0.3s;
 }
 
@@ -231,7 +223,6 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #4CAF50; /* Warna hijau fresh */
     color: white;
     border: none;
     padding: 8px 15px;
@@ -247,11 +238,11 @@ button i{
 }
 
 button:hover {
-    background-color: #388E3C; /* Warna lebih gelap pas hover */
+    background-color: #388E3C;
     transform: scale(1.05);
 }
 
-/* Warna unik untuk tiap button */
+
 .btn-cv {
     background-color: #1e4a6e;
 }
@@ -296,8 +287,9 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	text-align: start;
-	gap: 40px;
+	gap: 30px;
+	padding-top: 5%;
+	text-align: center;
 }
 
 .tools__header {
@@ -310,27 +302,13 @@ button:hover {
 	text-align: center;
 }
 
-.tools__paragraph {
-	max-width: calc(var(--index) * 45);
-	font-size: calc(var(--index) * .9);
-	margin-top: calc(var(--index) / 1.25);
-	transform: var(--main-article-transform);
-	transition: var(--transition);
-	will-change: transform;
-}
-
-.tools {
-    text-align: center;
-    margin: 50px 0;
-}
-
 .tools__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Biar logo di tengah */
-    align-items: center; /* Rata tengah secara vertikal */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    max-width: 80%; /* Batas maksimal */
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
 }
@@ -373,6 +351,82 @@ button:hover {
 }
 
 
+/* projects */
+.projects{
+	min-height: 10vh;
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+	padding-bottom: 8%;
+	padding-top: 5%;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: start;
+}
+
+.projects__header {
+	text-transform: uppercase;
+	font-size: calc(var(--index) * 1.6);
+	letter-spacing: calc(var(--index) / 7.5);
+	transform: var(--main-article-transform);
+	transition: var(--transition);
+	will-change: transform;
+	text-align: center;
+}
+
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.project-card {
+    background: #2b2a13;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+	background: #64602d;
+}
+
+.project-card__thumbnail {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+}
+
+.project-card__content {
+    padding: 3%;
+    text-align: start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.project-card__title {
+    font-size: calc(var(--index) * 1);
+    font-weight: 500;
+}
+
+.project-card__category{
+    font-size: calc(var(--index) * .7);
+    color: #ffffff92;
+}
+
+.project-card__tools img{
+	width: 25px;
+}
+
 /* Sidebar Menu (Hidden by Default) */
 @media (max-width: 768px) {
     .nav-links {
@@ -411,7 +465,7 @@ button:hover {
 
     /* Animasi hamburger menjadi "X" */
     .hamburger.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 4px);
+        transform: rotate(45deg) translate(8.2px, 4px);
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -419,7 +473,7 @@ button:hover {
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(10px, -4px);
+        transform: rotate(-45deg) translate(8.2px, -4px);
     }
 
 	.main-article {
@@ -432,11 +486,11 @@ button:hover {
 
 
     .self-photo {
-        order: -1; /* Pindah ke atas */
+        order: -1; 
     }
 
     .self-photo img {
-        max-width: 150px; /* Foto diperkecil di layar kecil */
+        max-width: 150px; 
     }
 
 	.buttons-container{
@@ -446,7 +500,7 @@ button:hover {
 	}
 
 	.tools__container{
-		min-width: 90%;
+		min-width: 80%;
 	}
 	
 	.tool{
@@ -460,5 +514,12 @@ button:hover {
 
 	.tool__text{
 		font-size: calc(var(--index) * .9);
+	}
+	
+	.projects__container {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(360px, 1fr));
+		gap: 20px;
+		margin-top: 20px;
 	}
 }
