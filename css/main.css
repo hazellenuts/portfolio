@@ -308,7 +308,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
 }
@@ -501,6 +501,7 @@ button:hover {
 
 	.tools__container{
 		min-width: 80%;
+		max-width: 90%;
 	}
 	
 	.tool{
